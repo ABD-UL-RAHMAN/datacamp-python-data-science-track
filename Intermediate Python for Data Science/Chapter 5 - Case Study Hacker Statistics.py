@@ -161,11 +161,13 @@ print(all_walks)
 
 
 #Visualize all walks
-import matplotlib.pyplot as plt
+# numpy and matplotlib imported, seed set.
 import numpy as np
+
 np.random.seed(123)
+# initialize and populate all_walks
 all_walks = []
-for i in range(10) :
+for i in range(5) :
     random_walk = [0]
     for x in range(100) :
         step = random_walk[-1]
@@ -179,7 +181,7 @@ for i in range(10) :
         random_walk.append(step)
     all_walks.append(random_walk)
 
-# Convert all_walks to Numpy array: np_aw
+# Convert all_walks to NumPy array: np_aw
 np_aw = np.array(all_walks)
 
 # Plot np_aw and show
